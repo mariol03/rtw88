@@ -1,34 +1,8 @@
 rtw88
 ===========
-### A repo for the newest Realtek rtlwifi codes.
+### A repo for the newest Realtek rtlwifi codes forked form https://github.com/lwfinger/rtw88.
 
-This code will build on any kernel 4.19 and newer as long as the distro has not modified
-any of the kernel APIs. IF YOU RUN UBUNTU, YOU CAN BE ASSURED THAT THE APIs HAVE CHANGED.
-NO, I WILL NOT MODIFY THE SOURCE FOR YOU. YOU ARE ON YOUR OWN!!!!!
-
-This repository includes drivers for the following cards:
-
-RTL8822BE, RTL8822CE, RTL8821CE, and RTL8723DE
-
-If you are looking for a driver for chips such as 
-RTL8188EE, RTL8192CE, RTL8192CU, RTL8192DE, RTL8192EE, RTL8192SE, RTL8723AE, RTL8723BE, or RTL8821AE,
-these should be provided by your kernel. If not, then you should go to the Backports Project
-(https://backports.wiki.kernel.org/index.php/Main_Page) to obtain the necessary code.
-
-This repo has been brought up to date with the kernel code on Sep. 25, 2020.
-
-The main changes are as follows:
-1. The methods for obtaining DMA buffers has changed. This should have no effect.
-2. The regulatory methods are changed. This may have some effect on users.
-3. The firmware loading has been more resistent against timeouts.
-4. The RX buffer size is increased.
-5. Antenna selection code was modified. This change may help the low signal problems.
-6. BlueTooth coexistence was modified.
-
-When making these changes, I tried to watch for things that might be incompatible
-with older kernels. As this kind of updating in really boring, I might have missed
-something. Please let me know of build problems.
-
+Created as it couldn't compile while on Elementary OS 5.1.7 (Hera), beacause it uses an older kernel that it hasn't got fsleep.
 
 ### Installation instruction
 ##### Requirements
@@ -92,14 +66,5 @@ sudo make install
 
 Remember, this MUST be done whenever you get a new kernel - no exceptions.
 
-These drivers will not build for kernels older than 4.14. If you must use an older kernel,
-submit a GitHub issue with a listing of the build errors. Without the errors, the issue
-will be ignored. I am not a mind reader.
-
-When you have problems where the driver builds and loads correctly, but fails to work, a GitHub
-issue is NOT the best place to report it. I have no idea of the internal workings of any of the
-chips, and the Realtek engineers who do will not read these issues. To reach them, send E-mail to
-linux-wireless@vger.kernel.org. Include a detailed description of any messages in the kernel
-logs and any steps that you have taken to analyze or fix the problem. If your description is
-not complete, you are unlikely to get any satisfaction.
-
+I haven't tried this to build on an older kernel, if you have some problems try creating a GitHub issue with a listing of the build errors. Without the errors, the issue
+will be ignored.
