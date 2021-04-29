@@ -2,7 +2,7 @@ rtw88
 ===========
 ### A repo for the newest Realtek rtlwifi codes forked form https://github.com/lwfinger/rtw88.
 
-Created as it couldn't compile while on Elementary OS 5.1.7 (Hera), beacause it uses an older kernel that it hasn't got fsleep.
+Created as it doesn't compile on Elementary OS 5.1.7 (Hera), beacause it uses an older kernel that it hasn't got fsleep.
 
 ### Installation instruction
 ##### Requirements
